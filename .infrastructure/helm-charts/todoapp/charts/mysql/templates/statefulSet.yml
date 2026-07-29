@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: mysql
   replicas: {{ .Values.mysql.statefulset.replicas }}
-  serviceName: mysql
+  serviceName: {{ .Chart.Name }}-service
   template:
     metadata:
       labels:

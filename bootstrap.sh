@@ -12,3 +12,4 @@ helm lint .infrastructure/helm-charts/todoapp
 
 helm upgrade --install todoapp .infrastructure/helm-charts/todoapp
 
+kubectl get all,cm,secret,ing -A > output.log
