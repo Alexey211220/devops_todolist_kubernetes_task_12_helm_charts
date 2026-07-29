@@ -66,19 +66,19 @@ app=mysql:NoSchedule
 Validate the parent chart:
 
 ```bash
-helm lint ./.infrastructure/helm-charts/todoapp
+helm lint ./.infrastructure/helm-chart/todoapp
 ```
 
 Validate the MySQL subchart:
 
 ```bash
-helm lint ./.infrastructure/helm-charts/todoapp/charts/mysql
+helm lint ./.infrastructure/helm-chart/todoapp/charts/mysql
 ```
 
 Render the parent chart together with the MySQL subchart:
 
 ```bash
-helm template todoapp ./.infrastructure/helm-charts/todoapp
+helm template todoapp ./.infrastructure/helm-chart/todoapp
 ```
 
 Both `helm lint` commands should finish with:
@@ -90,7 +90,7 @@ Both `helm lint` commands should finish with:
 ## 4. Install the Helm chart
 
 ```bash
-helm upgrade --install todoapp ./.infrastructure/helm-charts/todoapp
+helm upgrade --install todoapp ./.infrastructure/helm-chart/todoapp
 ```
 
 Check the installed release:
